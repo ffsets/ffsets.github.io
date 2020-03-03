@@ -2,12 +2,21 @@
 <html>
 <body>
 
-<p>Click the button to open a new browser window.</p>
+<p>Pixiv bookmarks random page opener</p>
+
+<form>
+  <label for="fname">Username:</label><br>
+  <input type="text" id="user" name="user"><br>
+  <label for="lname">Max page number:</label><br>
+  <input type="number" id="maxp" name="maxp" min="1">
+</form>
 
 <button onclick="myFunction()">Open</button>
 
 <script>
 function myFunction() {
+  var page = Math.random() * document.getElementById("maxp");
+
   window.open("https://www.w3schools.com");
 }
 </script>
