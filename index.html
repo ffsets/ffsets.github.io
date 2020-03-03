@@ -15,9 +15,9 @@
 
 <script>
 function myFunction() {
-  var page = Math.random() * document.getElementById("maxp");
+  var page = Math.floor(Math.random() * document.getElementById("maxp").value);
 
-  window.open("https://www.w3schools.com");
+  window.open("https://www.pixiv.net/bookmark.php?rest=show&p=" + page);
 }
 </script>
 
