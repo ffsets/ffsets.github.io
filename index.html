@@ -15,7 +15,7 @@
 
 <script>
 function myFunction() {
-  var page = Math.floor(Math.random() * (document.getElementById("maxp").value - document.getElementById("minp").value)) + document.getElementById("minp").value;
+  var page = Math.floor(Math.random() * (document.getElementById("maxp").value - document.getElementById("minp").value) + document.getElementById("minp").value);
 
   window.open("https://www.pixiv.net/bookmark.php?rest=show&p=" + page);
 }
