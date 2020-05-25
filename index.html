@@ -5,6 +5,8 @@
 <p>Pixiv bookmarks random page opener</p>
 
 <form>
+  <label for="lname">Min page number:</label><br>
+  <input type="number" id="minp" name="minp" min="1">
   <label for="lname">Max page number:</label><br>
   <input type="number" id="maxp" name="maxp" min="1">
 </form>
@@ -13,7 +15,7 @@
 
 <script>
 function myFunction() {
-  var page = Math.floor(Math.random() * document.getElementById("maxp").value);
+  var page = Math.floor(Math.random() * (document.getElementById("maxp").value - document.getElementById("minp").value)) + document.getElementById("minp").value;
 
   window.open("https://www.pixiv.net/bookmark.php?rest=show&p=" + page);
 }
